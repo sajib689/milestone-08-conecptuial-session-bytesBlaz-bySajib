@@ -1,5 +1,9 @@
+import { useLoaderData } from "react-router-dom";
+
 
 const Blogs = () => {
+    const blogs = useLoaderData()
+    console.log(blogs)
   return (
     <section className="py-6 sm:py-12 dark:bg-gray-100 dark:text-gray-800">
       <div className="container p-6 mx-auto space-y-8">
