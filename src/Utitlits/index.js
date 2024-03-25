@@ -24,9 +24,9 @@ export const saveBlogs = blog => {
 }
 
 // delete blogs
-export const DeleteBlogs = id => {
+export const deleteBlogs = id => {
     let blogs = getBlogs();
-    const remaining = blogs.filter(blog => blog.id !== id)
+    const remaining = blogs.filter(b => b.id !== id)
 
     localStorage.setItem("blogs", JSON.stringify(remaining))
     toast.success("Delete Success.")
